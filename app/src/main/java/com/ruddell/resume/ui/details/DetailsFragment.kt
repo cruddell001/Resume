@@ -4,7 +4,6 @@ import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -12,11 +11,10 @@ import android.view.ViewGroup
 import com.ruddell.resume.R
 import com.ruddell.resume.ui.Details
 import com.ruddell.resume.ui.MainActivity
+import com.ruddell.resume.ui.details.adapters.AboutItemAdapter
 import com.ruddell.resume.ui.details.adapters.EducationItemAdapter
 import com.ruddell.resume.ui.details.adapters.SkillsItemAdapter
 import com.ruddell.resume.ui.details.adapters.WorkItemAdapter
-import com.ruddell.resume.ui.details.dummy.DummyContent
-import com.ruddell.resume.ui.details.dummy.DummyContent.DummyItem
 import kotlinx.android.synthetic.main.fragment_details.*
 
 
@@ -67,7 +65,7 @@ class DetailsFragment : Fragment() {
                 Details.WORK_EXPERIENCE -> WorkItemAdapter(view.context, this@DetailsFragment)
                 Details.EDUCATION -> EducationItemAdapter(view.context, this@DetailsFragment)
                 Details.SKILLS -> SkillsItemAdapter(view.context, this@DetailsFragment)
-                else -> MyItemRecyclerViewAdapter(DummyContent.ITEMS)
+                Details.ABOUT -> AboutItemAdapter(view.context, childFragmentManager)
             }
         }
 

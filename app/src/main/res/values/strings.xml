@@ -10,4 +10,23 @@
     <string name="about">About App</string>
     <string name="icon">Icon</string>
     <string name="GPA">GPA:</string>
+    <string name="third_party_licenses">Third-Party Licenses</string>
+    <string name="app_development">App Development</string>
+    <string name="contact_info">Contact Info</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="phone_number">405-404-8376</string>
+    <string name="email">chris.ruddell@gmail.com</string>
+    <string name="oklahoma_city_ok">Oklahoma City, OK</string>
+    <string name="personal_statement">I have over six years of experience developing mobile apps for iOS and Android.
+        For the past three years I have worked as an Android developer for Museum of the Bible, and am current serving
+        as the lead developer on the Software team there. While my formal education is not in C.S., I have taken the
+        online equivalents of all core classes in a standard C.S. undergraduate degree. I am seeking a job in the
+        Austin/San Antonio area.
+    </string>
+    <string name="development_description">This app was developed by Chris Ruddell from scratch using Android Studio. It
+        incorporates elements from Material Design and Android Architecture Components. Data is loaded at runtime and
+        updated dynamically from an AWS server instance using Retrofit.
+    </string>
 </resources>
