@@ -9,15 +9,14 @@ import android.widget.TextView
 import com.ruddell.resume.R
 
 
-import com.ruddell.resume.ui.details.DetailsFragment.OnListFragmentInteractionListener
+
 import com.ruddell.resume.ui.details.dummy.DummyContent.DummyItem
 
 import kotlinx.android.synthetic.main.card_work_item.view.*
 
 
 class MyItemRecyclerViewAdapter(
-    private val mValues: List<DummyItem>,
-    private val mListener: OnListFragmentInteractionListener?
+    private val mValues: List<DummyItem>
 ) : RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder>() {
 
     private val mOnClickListener: View.OnClickListener
@@ -25,9 +24,7 @@ class MyItemRecyclerViewAdapter(
     init {
         mOnClickListener = View.OnClickListener { v ->
             val item = v.tag as DummyItem
-            // Notify the active callbacks interface (the activity, if the fragment is attached to
-            // one) that an item has been selected.
-            mListener?.onListFragmentInteraction(item)
+
         }
     }
 
@@ -52,9 +49,9 @@ class MyItemRecyclerViewAdapter(
     override fun getItemCount(): Int = mValues.size
 
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
-        val mIdView: TextView = mView.title
-        val mContentView: TextView = mView.subTitle
-        val rightLabel : TextView = mView.rightLabel
+        val mIdView: TextView = mView.findViewById(R.id.title)
+        val mContentView: TextView = mView.findViewById(R.id.subTitle)
+        val rightLabel : TextView = mView.findViewById(R.id.rightLabel)
 
         override fun toString(): String {
             return super.toString() + " '" + mContentView.text + "'"

@@ -45,10 +45,10 @@ class HomeFragment : Fragment() {
         val root = view as? ConstraintLayout ?: return
         val context =  activity ?: return
         activity?.runOnUiThread {
+            collapsed = !collapsed
             constraintOriginal = constraintOriginal ?: root.constraintSet()
             constraintNew = constraintNew ?: R.layout.fragment_home_collapsed.constraintSet(context)
-            val constraintSet = if (collapsed) constraintOriginal else constraintNew
-            collapsed = !collapsed
+            val constraintSet = if (collapsed) constraintNew else constraintOriginal
 
             when (collapsed) {
                 true -> {

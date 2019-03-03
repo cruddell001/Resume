@@ -34,6 +34,11 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
         }
     }
 
+    override fun onBackPressed() {
+        if (detailsFragment!=null) hideDetails()
+        else super.onBackPressed()
+    }
+
     fun showDetails(details: Details, centerPosition: Position) {
         currentDetailPosition = centerPosition
         currentDetailShown = details
