@@ -12,4 +12,5 @@
     <string name="skills">Languages, Frameworks, etc</string>
     <string name="about">About App</string>
     <string name="icon">Icon</string>
+    <string name="GPA">GPA:</string>
 </resources>
