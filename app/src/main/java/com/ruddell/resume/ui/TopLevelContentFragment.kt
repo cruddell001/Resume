@@ -12,7 +12,4 @@ import com.ruddell.resume.R
 class TopLevelContentFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? = inflater.inflate(R.layout.fragment_top_level_content, container, false)
-
-
-
 }

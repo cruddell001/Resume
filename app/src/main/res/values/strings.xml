@@ -7,4 +7,8 @@
     <string name="my_name_two_lines">Chris\nRuddell</string>
     <string name="position">Senior Android Developer</string>
     <string name="resume">Resume</string>
+    <string name="education">Education</string>
+    <string name="work_experience">Work Experience</string>
+    <string name="skills">Languages, Frameworks, etc</string>
+    <string name="about">About App</string>
 </resources>
