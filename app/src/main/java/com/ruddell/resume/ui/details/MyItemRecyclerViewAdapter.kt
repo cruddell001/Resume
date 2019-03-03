@@ -12,13 +12,9 @@ import com.ruddell.resume.R
 import com.ruddell.resume.ui.details.DetailsFragment.OnListFragmentInteractionListener
 import com.ruddell.resume.ui.details.dummy.DummyContent.DummyItem
 
-import kotlinx.android.synthetic.main.fragment_detail_item.view.*
+import kotlinx.android.synthetic.main.card_work_item.view.*
 
-/**
- * [RecyclerView.Adapter] that can display a [DummyItem] and makes a call to the
- * specified [OnListFragmentInteractionListener].
- * TODO: Replace the implementation with code for your data type.
- */
+
 class MyItemRecyclerViewAdapter(
     private val mValues: List<DummyItem>,
     private val mListener: OnListFragmentInteractionListener?
@@ -37,7 +33,7 @@ class MyItemRecyclerViewAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_detail_item, parent, false)
+            .inflate(R.layout.card_work_item, parent, false)
         return ViewHolder(view)
     }
 
@@ -56,8 +52,9 @@ class MyItemRecyclerViewAdapter(
     override fun getItemCount(): Int = mValues.size
 
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
-        val mIdView: TextView = mView.item_number
-        val mContentView: TextView = mView.content
+        val mIdView: TextView = mView.title
+        val mContentView: TextView = mView.subTitle
+        val rightLabel : TextView = mView.rightLabel
 
         override fun toString(): String {
             return super.toString() + " '" + mContentView.text + "'"

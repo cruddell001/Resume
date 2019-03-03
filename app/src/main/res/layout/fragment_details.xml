@@ -11,5 +11,5 @@
         android:layout_marginRight="16dp"
         app:layoutManager="LinearLayoutManager"
         tools:context=".ui.details.DetailsFragment"
-        tools:listitem="@layout/fragment_detail_item"
+        tools:listitem="@layout/card_work_item"
 />

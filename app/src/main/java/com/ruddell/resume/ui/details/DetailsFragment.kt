@@ -11,6 +11,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ruddell.resume.R
+import com.ruddell.resume.ui.Details
+import com.ruddell.resume.ui.details.adapters.WorkItemAdapter
 
 import com.ruddell.resume.ui.details.dummy.DummyContent
 import com.ruddell.resume.ui.details.dummy.DummyContent.DummyItem
@@ -21,12 +23,18 @@ import com.ruddell.resume.ui.details.dummy.DummyContent.DummyItem
  * [DetailsFragment.OnListFragmentInteractionListener] interface.
  */
 class DetailsFragment : Fragment() {
+
+    lateinit var details:Details
+
     companion object {
         const val TAG = "DetailsFragment"
-    }
 
-    // TODO: Customize parameters
-    private var columnCount = 1
+        fun newInstance(details: Details) : DetailsFragment{
+            val fragment = DetailsFragment()
+            fragment.details = details
+            return fragment
+        }
+    }
 
     private var listener: OnListFragmentInteractionListener? = null
 
@@ -43,7 +51,10 @@ class DetailsFragment : Fragment() {
             with(view) {
                 Log.d(TAG, "setting adapter...")
                 layoutManager = LinearLayoutManager(context)
-                adapter = MyItemRecyclerViewAdapter(DummyContent.ITEMS, listener)
+                adapter = when (details) {
+                    Details.WORK_EXPERIENCE -> WorkItemAdapter(view.context, this@DetailsFragment)
+                    else -> MyItemRecyclerViewAdapter(DummyContent.ITEMS, listener)
+                }
             }
         }
         return view

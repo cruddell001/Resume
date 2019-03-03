@@ -4,14 +4,21 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import com.ruddell.resume.R
+import com.ruddell.resume.datasource.LocalImporter
 import com.ruddell.resume.extensions.circleHide
 import com.ruddell.resume.extensions.circleReveal
 import com.ruddell.resume.extensions.toColor
 import com.ruddell.resume.models.Position
 import com.ruddell.resume.ui.details.DetailsFragment
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import kotlin.coroutines.CoroutineContext
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), CoroutineScope {
+    override val coroutineContext: CoroutineContext get() = Dispatchers.Main
     var currentDetailShown:Details? = null
     var currentDetailPosition:Position = Position(0,0)
     var detailsFragment:DetailsFragment? = null
@@ -21,6 +28,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         detailsBackground?.setOnClickListener { hideDetails() }
+
+        launch {
+            withContext(Dispatchers.IO) { LocalImporter.import(this@MainActivity, R.raw.initialcontent) }
+        }
     }
 
     fun showDetails(details: Details, centerPosition: Position) {
@@ -32,19 +43,26 @@ class MainActivity : AppCompatActivity() {
         Handler().postDelayed({
             supportFragmentManager?.apply {
                 detailsFragment = findFragmentByTag(DetailsFragment.TAG) as? DetailsFragment ?: DetailsFragment()
-                beginTransaction()
-                    .replace(R.id.detailsFragmentContainer,detailsFragment, DetailsFragment.TAG)
-                    .commit()
+                detailsFragment?.details = details
+                detailsFragment?.let {detailsFragment ->
+                    beginTransaction()
+                        .replace(R.id.detailsFragmentContainer,detailsFragment, DetailsFragment.TAG)
+                        .commit()
+                }
+
             }
         }, 300)
     }
 
     fun hideDetails() {
-        supportFragmentManager?.apply {
-            beginTransaction()
-                .remove(detailsFragment)
-                .commit()
+        detailsFragment?.let {detailsFragment ->
+            supportFragmentManager?.apply {
+                beginTransaction()
+                    .remove(detailsFragment)
+                    .commit()
+            }
         }
+
         detailsFragment = null
         detailsBackground?.circleHide(currentDetailPosition)
     }

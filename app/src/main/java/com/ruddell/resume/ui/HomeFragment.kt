@@ -53,10 +53,10 @@ class HomeFragment : Fragment() {
             when (collapsed) {
                 true -> {
                     Handler().postDelayed({
-                        childFragmentManager.findFragmentById(R.id.topLevelFragment).view?.visibility = View.VISIBLE
+                        childFragmentManager.findFragmentById(R.id.topLevelFragment)?.view?.visibility = View.VISIBLE
                     }, 300)
                 }
-                false -> childFragmentManager.findFragmentById(R.id.topLevelFragment).view?.visibility = View.GONE
+                false -> childFragmentManager.findFragmentById(R.id.topLevelFragment)?.view?.visibility = View.GONE
             }
 
             TransitionManager.beginDelayedTransition(root)
