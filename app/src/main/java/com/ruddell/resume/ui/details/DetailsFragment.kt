@@ -13,6 +13,7 @@ import com.ruddell.resume.R
 import com.ruddell.resume.ui.Details
 import com.ruddell.resume.ui.MainActivity
 import com.ruddell.resume.ui.details.adapters.EducationItemAdapter
+import com.ruddell.resume.ui.details.adapters.SkillsItemAdapter
 import com.ruddell.resume.ui.details.adapters.WorkItemAdapter
 import com.ruddell.resume.ui.details.dummy.DummyContent
 import com.ruddell.resume.ui.details.dummy.DummyContent.DummyItem
@@ -30,7 +31,7 @@ class DetailsFragment : Fragment() {
             Details.WORK_EXPERIENCE -> context.resources.getDrawable(R.drawable.work_icon, null)
             Details.EDUCATION -> context.resources.getDrawable(R.drawable.education_icon, null)
             Details.SKILLS -> context.resources.getDrawable(R.drawable.skills_icon, null)
-            Details.ABOUT -> context.resources.getDrawable(R.drawable.info_icon)
+            Details.ABOUT -> context.resources.getDrawable(R.drawable.info_icon, null)
         }
     }
 
@@ -65,6 +66,7 @@ class DetailsFragment : Fragment() {
             it.adapter = when (details) {
                 Details.WORK_EXPERIENCE -> WorkItemAdapter(view.context, this@DetailsFragment)
                 Details.EDUCATION -> EducationItemAdapter(view.context, this@DetailsFragment)
+                Details.SKILLS -> SkillsItemAdapter(view.context, this@DetailsFragment)
                 else -> MyItemRecyclerViewAdapter(DummyContent.ITEMS)
             }
         }
