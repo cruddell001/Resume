@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import com.ruddell.resume.R
+import com.ruddell.resume.datasource.ApiImporter
 import com.ruddell.resume.datasource.LocalImporter
 import com.ruddell.resume.extensions.circleHide
 import com.ruddell.resume.extensions.circleReveal
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
 
         launch {
             withContext(Dispatchers.IO) { LocalImporter.import(this@MainActivity, R.raw.initialcontent) }
+            ApiImporter.import(this@MainActivity)
         }
     }
 

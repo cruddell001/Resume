@@ -12,6 +12,9 @@ ext {
             room            : "1.1.1",
             coroutine       : "1.0.1"
     ]
+    servers = [
+            resume          : "http://54.191.179.65:8080"
+    ]
 }
 
 android {
@@ -23,6 +26,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "CONTENT_SERVER_URL", "\"$servers.resume\"")
     }
     buildTypes {
         release {
@@ -50,7 +54,14 @@ dependencies {
     implementation "android.arch.persistence.room:runtime:$versions.room"
     kapt "android.arch.persistence.room:compiler:$versions.room"
     testImplementation "android.arch.persistence.room:testing:$versions.room"
+    // use kapt for Kotlin
+    testImplementation "android.arch.core:core-testing:$versions.lifecycle"
     // arch coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutine"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutine"
+
+    //retrofit
+    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+
 }
