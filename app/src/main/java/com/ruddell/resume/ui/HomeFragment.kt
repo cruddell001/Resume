@@ -4,9 +4,9 @@ package com.ruddell.resume.ui
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
-import android.support.constraint.ConstraintLayout
-import android.support.constraint.ConstraintSet
-import android.support.v4.app.Fragment
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
+import androidx.fragment.app.Fragment
 import android.transition.TransitionManager
 import android.view.LayoutInflater
 import android.view.View
@@ -22,8 +22,8 @@ import kotlin.concurrent.schedule
 
 class HomeFragment : Fragment() {
     var collapsed = false
-    var constraintOriginal:ConstraintSet? = null
-    var constraintNew:ConstraintSet? = null
+    var constraintOriginal: ConstraintSet? = null
+    var constraintNew: ConstraintSet? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? = inflater.inflate(R.layout.fragment_home, container, false)
 

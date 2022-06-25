@@ -1,7 +1,7 @@
 package com.ruddell.resume.datasource
 
 import android.content.Context
-import android.support.annotation.WorkerThread
+import androidx.annotation.WorkerThread
 import android.util.Log
 import com.google.gson.GsonBuilder
 import com.ruddell.resume.database.repositories.ContentRepository

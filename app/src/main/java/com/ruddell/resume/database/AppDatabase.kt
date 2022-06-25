@@ -1,6 +1,6 @@
 package com.ruddell.resume.database
 
-import android.arch.persistence.room.*
+import androidx.room.*
 import android.content.Context
 import com.ruddell.resume.database.daos.EducationDao
 import com.ruddell.resume.database.daos.SkillsDao

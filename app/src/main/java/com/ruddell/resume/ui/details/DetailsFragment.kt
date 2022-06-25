@@ -2,8 +2,8 @@ package com.ruddell.resume.ui.details
 
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -60,7 +60,8 @@ class DetailsFragment : Fragment() {
 
         recyclerView?.let {
             Log.d(TAG, "setting adapter...")
-            it.layoutManager = LinearLayoutManager(context)
+            it.layoutManager =
+                LinearLayoutManager(context)
             it.adapter = when (details) {
                 Details.WORK_EXPERIENCE -> WorkItemAdapter(view.context, this@DetailsFragment)
                 Details.EDUCATION -> EducationItemAdapter(view.context, this@DetailsFragment)

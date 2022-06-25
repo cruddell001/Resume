@@ -1,7 +1,7 @@
 package com.ruddell.resume.database.daos
 
-import android.arch.lifecycle.LiveData
-import android.arch.persistence.room.*
+import androidx.lifecycle.LiveData
+import androidx.room.*
 import com.ruddell.resume.models.Skills
 import com.ruddell.resume.models.WorkExperience
 

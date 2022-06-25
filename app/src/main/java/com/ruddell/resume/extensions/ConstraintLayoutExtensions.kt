@@ -1,8 +1,8 @@
 package com.ruddell.resume.extensions
 
 import android.content.Context
-import android.support.constraint.ConstraintLayout
-import android.support.constraint.ConstraintSet
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
 
 fun ConstraintLayout.constraintSet() : ConstraintSet {
     val constraintSet = ConstraintSet()
