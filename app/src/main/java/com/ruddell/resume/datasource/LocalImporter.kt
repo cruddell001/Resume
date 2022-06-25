@@ -3,8 +3,8 @@ package com.ruddell.resume.datasource
 import android.content.Context
 import androidx.annotation.WorkerThread
 import android.util.Log
-import com.google.gson.GsonBuilder
 import com.ruddell.resume.database.repositories.ContentRepository
+import com.ruddell.resume.extensions.fromJson
 import com.ruddell.resume.models.Resume
 
 object LocalImporter {
@@ -17,8 +17,8 @@ object LocalImporter {
         val inSt = context.resources.openRawResource(resourceId)
         val contents = inSt.bufferedReader().use { it.readText() }
 
-        val gson = GsonBuilder().create()
-        val resume = gson.fromJson(contents , Resume::class.java)
+
+        val resume: Resume = contents.fromJson() ?: Resume()
 
         Log.d(TAG, "found ${resume.workExperience?.size} work items")
         Log.d(TAG, "found ${resume.education?.size} education items")

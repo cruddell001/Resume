@@ -1,22 +1,14 @@
 package com.ruddell.resume.database.typeconverters
 
 import androidx.room.TypeConverter
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-
-
+import com.ruddell.resume.extensions.fromJson
+import com.ruddell.resume.extensions.toJson
 
 class JsonConverter {
 
     @TypeConverter
-    fun fromString(value: String): List<String> {
-        val listType = object : TypeToken<List<String>>() {}.type
-        return Gson().fromJson(value, listType)
-    }
+    fun fromString(value: String): List<String> = value.fromJson() ?: emptyList()
 
     @TypeConverter
-    fun fromList(list: List<String>): String {
-        val gson = Gson()
-        return gson.toJson(list)
-    }
+    fun fromList(list: List<String>): String = list.toJson()
 }
