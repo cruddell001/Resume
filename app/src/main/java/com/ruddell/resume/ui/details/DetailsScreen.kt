@@ -7,14 +7,13 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ruddell.resume.R
+import com.ruddell.resume.extensions.*
 import com.ruddell.resume.ui.Details
 
 @Composable
@@ -41,31 +40,7 @@ fun DetailsView(details: Details) {
     }
 }
 
-@Composable
-private fun Details.backgroundColor() = colorResource(when (this) {
-    Details.WORK_EXPERIENCE -> R.color.workBackground
-    Details.EDUCATION -> R.color.educationBackground
-    Details.SKILLS -> R.color.skillsBackground
-    Details.ABOUT -> R.color.aboutBackground
-})
 
-@Composable
-private fun Details.iconImage() = when (this) {
-    Details.WORK_EXPERIENCE -> painterResource(R.drawable.work_icon)
-    Details.EDUCATION -> painterResource(R.drawable.education_icon)
-    Details.ABOUT -> painterResource(R.drawable.info_icon)
-    Details.SKILLS -> painterResource(R.drawable.skills_icon)
-}
-
-@Composable
-private fun Details.title() = stringResource(
-    id = when (this) {
-        Details.WORK_EXPERIENCE -> R.string.work_experience
-        Details.EDUCATION -> R.string.education
-        Details.ABOUT -> R.string.about
-        Details.SKILLS -> R.string.skills
-    }
-)
 
 @Preview
 @Composable

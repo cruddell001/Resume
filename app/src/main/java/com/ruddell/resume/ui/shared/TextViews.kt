@@ -9,5 +9,6 @@ import com.ruddell.resume.extensions.titleColor
 
 @Composable
 fun TitleView(text: String, modifier: Modifier = Modifier, style: TextStyle = TextStyle()) {
-    Text(text, modifier = modifier, style = style.merge(TextStyle(titleColor, fontSize = 18.sp)))
+    val defaultStyle = TextStyle(titleColor, fontSize = 18.sp)
+    Text(text, modifier = modifier, style = defaultStyle.merge(style))
 }

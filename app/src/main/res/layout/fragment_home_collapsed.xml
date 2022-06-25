@@ -5,18 +5,6 @@
              android:layout_height="match_parent"
              tools:context=".ui.HomeFragment">
 
-    <ImageView
-            android:id="@+id/backgroundImage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/profile"
-            android:layout_marginStart="-100dp"
-            android:layout_marginEnd="-100dp"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/my_name"
-            app:layout_constraintTop_toTopOf="parent"
-    />
-
     <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
             android:layout_width="1dp"
@@ -118,6 +106,14 @@
                 android:name="com.ruddell.resume.ui.TopLevelContentFragment"
                 tools:layout="@layout/fragment_top_level_content"
                 />
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/my_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile" />
     </FrameLayout>
 
 
