@@ -2,7 +2,7 @@
     <string name="app_name">Resume</string>
     <string name="my_name">Chris Ruddell</string>
     <string name="my_name_two_lines">Chris\nRuddell</string>
-    <string name="position">Senior Android Developer</string>
+    <string name="position">Lead Mobile Engineer</string>
     <string name="resume">Resume</string>
     <string name="education">Academics</string>
     <string name="work_experience">Work Experience</string>
@@ -19,15 +19,13 @@
     <string name="phone_number">405-404-8376</string>
     <string name="email">chris.ruddell@gmail.com</string>
     <string name="city_state">Austin, TX</string>
-    <string name="personal_statement">I have over six years of experience developing mobile apps for iOS and Android.
-        For the past three years I have worked as an Android developer for Museum of the Bible, and am current serving
-        as the lead developer on the Software team there. While my formal education is not in C.S., I have taken the
-        online equivalents of all core classes in a standard C.S. undergraduate degree. I am seeking a job in the
-        Austin/San Antonio area.
+    <string name="personal_statement">I have been developing mobile apps for iOS and Android since 2012.
+        For the past three years I have worked as a mobile engineer for BigCommerce, and am current serving
+        as the lead engineer on the mobile team there.
     </string>
     <string name="development_description">This app was developed by Chris Ruddell from scratch using Android Studio. It
-        incorporates elements from Material Design and Android Architecture Components. Data is loaded at runtime and
-        updated dynamically from an AWS server instance using Retrofit.
+        incorporates elements from Material Design, Jetpack Compose and Android Architecture Components. Data is loaded at runtime and
+        updated dynamically from an AWS server instance using Ktor.
     </string>
     <string name="about_license">Icons in this app were made by Freepik and obtained from www.flaticon.com\n\nLicenses used by third-party libraries in this app:\n\nApache 2.0</string>
 </resources>
