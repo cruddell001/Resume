@@ -11,4 +11,4 @@ data class Education (
     val graduationDate:String?,
     val gpa:Float?,
     val website:String?
-)
+): ApiModel

@@ -11,6 +11,9 @@
     <color name="skillsBackground">@color/md_green_100</color>
     <color name="aboutBackground">@color/md_amber_300</color>
 
+    <color name="cardBackground">@color/white</color>
+    <color name="titleColor">@color/black</color>
+
     <!--
     google's material design colours from
 http://www.google.com/design/spec/style/color.html#color-ui-color-palette

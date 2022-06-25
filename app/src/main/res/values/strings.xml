@@ -18,7 +18,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="phone_number">405-404-8376</string>
     <string name="email">chris.ruddell@gmail.com</string>
-    <string name="oklahoma_city_ok">Oklahoma City, OK</string>
+    <string name="city_state">Austin, TX</string>
     <string name="personal_statement">I have over six years of experience developing mobile apps for iOS and Android.
         For the past three years I have worked as an Android developer for Museum of the Bible, and am current serving
         as the lead developer on the Software team there. While my formal education is not in C.S., I have taken the
@@ -29,4 +29,5 @@
         incorporates elements from Material Design and Android Architecture Components. Data is loaded at runtime and
         updated dynamically from an AWS server instance using Retrofit.
     </string>
+    <string name="about_license">Icons in this app were made by Freepik and obtained from www.flaticon.com\n\nLicenses used by third-party libraries in this app:\n\nApache 2.0</string>
 </resources>

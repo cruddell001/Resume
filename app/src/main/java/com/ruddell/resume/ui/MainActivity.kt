@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
         Handler().postDelayed({
             supportFragmentManager?.apply {
                 detailsFragment = findFragmentByTag(DetailsFragment.TAG) as? DetailsFragment ?: DetailsFragment()
-                detailsFragment?.details = details
+                detailsFragment?.details?.value = details
                 detailsFragment?.let {detailsFragment ->
                     beginTransaction()
                         .replace(R.id.detailsFragmentContainer,detailsFragment, DetailsFragment.TAG)

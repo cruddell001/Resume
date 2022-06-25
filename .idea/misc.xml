@@ -3,7 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/compose-model-1656169842717.xml" value="0.25" />
+        <entry key="../../../../layout/compose-model-1656171070849.xml" value="0.23425925925925925" />
+        <entry key="../../../../layout/compose-model-1656177159077.xml" value="0.23425925925925925" />
+        <entry key="../../../../layout/compose-model-1656178348606.xml" value="0.17407407407407408" />
+        <entry key="../../../../layout/compose-model-1656179149160.xml" value="0.17407407407407408" />
+        <entry key="../../../../layout/compose-model-1656180105744.xml" value="0.17407407407407408" />
+        <entry key="../../../../layout/compose-model-1656180121807.xml" value="0.24351851851851852" />
+        <entry key="../../../../layout/compose-model-1656180835745.xml" value="0.1814814814814815" />
+        <entry key="app/src/main/res/layout/about_screen_details.xml" value="0.13333333333333333" />
+        <entry key="app/src/main/res/layout/card_about_item.xml" value="0.13333333333333333" />
+        <entry key="app/src/main/res/layout/card_education_item.xml" value="0.1935185185185185" />
+        <entry key="app/src/main/res/layout/card_work_item.xml" value="0.1935185185185185" />
+        <entry key="app/src/main/res/layout/card_work_item_collapsed.xml" value="0.1935185185185185" />
+        <entry key="app/src/main/res/layout/card_work_item_expanded.xml" value="0.1935185185185185" />
+        <entry key="app/src/main/res/layout/fragment_app_development.xml" value="0.13333333333333333" />
+        <entry key="app/src/main/res/layout/fragment_contact.xml" value="0.13333333333333333" />
+        <entry key="app/src/main/res/layout/fragment_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_license.xml" value="0.13333333333333333" />
       </map>
     </option>
   </component>

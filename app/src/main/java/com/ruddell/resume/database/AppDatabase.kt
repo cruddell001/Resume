@@ -26,9 +26,9 @@ abstract class AppDatabase : RoomDatabase() {
         @Volatile private var INSTANCE: AppDatabase? = null
 
         @Synchronized
-        operator fun get(context: Context): AppDatabase? {
+        operator fun get(context: Context): AppDatabase {
             if (INSTANCE == null) INSTANCE = create(context, false)
-            return INSTANCE
+            return INSTANCE!!
         }
 
         internal fun create(context: Context, memoryOnly: Boolean): AppDatabase {

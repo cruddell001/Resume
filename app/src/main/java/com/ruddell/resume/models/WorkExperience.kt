@@ -12,4 +12,4 @@ data class WorkExperience (
     val companyName:String?,
     val dates:String?,
     val description:String?
-)
+): ApiModel

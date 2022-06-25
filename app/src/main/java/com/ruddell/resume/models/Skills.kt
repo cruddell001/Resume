@@ -9,4 +9,4 @@ class Skills (
     @PrimaryKey val _id:Int?,
     @NonNull val categoryName:String,
     @NonNull val itemNames:List<String>
-)
+): ApiModel
