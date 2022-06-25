@@ -13,7 +13,7 @@ ext {
             coroutine       : "1.0.1"
     ]
     servers = [
-            resume          : "http://54.191.179.65:8080"
+            resume          : "https://my-resume.app"
     ]
 }
 

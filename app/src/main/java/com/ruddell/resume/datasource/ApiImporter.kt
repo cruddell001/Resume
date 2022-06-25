@@ -80,6 +80,6 @@ object RetrofitClient {
 
 interface ResumeService {
 
-    @get:GET("/resume/json")
+    @get:GET("/")
     val resume: Call<Resume>
 }
