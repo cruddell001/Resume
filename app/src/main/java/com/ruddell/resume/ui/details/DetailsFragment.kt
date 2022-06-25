@@ -8,6 +8,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.ruddell.resume.R
 import com.ruddell.resume.ui.Details
 import com.ruddell.resume.ui.MainActivity
@@ -15,7 +18,6 @@ import com.ruddell.resume.ui.details.adapters.AboutItemAdapter
 import com.ruddell.resume.ui.details.adapters.EducationItemAdapter
 import com.ruddell.resume.ui.details.adapters.SkillsItemAdapter
 import com.ruddell.resume.ui.details.adapters.WorkItemAdapter
-import kotlinx.android.synthetic.main.fragment_details.*
 
 
 class DetailsFragment : Fragment() {
@@ -53,12 +55,12 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        iconView?.setImageDrawable(icon)
-        titleView?.text = title
+        view.findViewById<ImageView>(R.id.iconView)?.setImageDrawable(icon)
+        view.findViewById<TextView>(R.id.titleView)?.text = title
 
-        iconView?.setOnClickListener { (activity as? MainActivity)?.onBackPressed() }
+        view.findViewById<ImageView>(R.id.iconView)?.setOnClickListener { (activity as? MainActivity)?.onBackPressed() }
 
-        recyclerView?.let {
+        view.findViewById<RecyclerView>(R.id.recyclerView)?.let {
             Log.d(TAG, "setting adapter...")
             it.layoutManager =
                 LinearLayoutManager(context)

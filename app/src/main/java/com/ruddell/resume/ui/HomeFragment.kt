@@ -14,8 +14,6 @@ import android.view.ViewGroup
 
 import com.ruddell.resume.R
 import com.ruddell.resume.extensions.constraintSet
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_top_level_content.*
 import java.util.*
 import kotlin.concurrent.schedule
 
@@ -36,8 +34,8 @@ class HomeFragment : Fragment() {
             animateView()
         }, 3000)
 
-        resumeLabel?.setOnClickListener { animateView() }
-        backgroundImage?.setOnClickListener { animateView() }
+        view.findViewById<View>(R.id.resumeLabel)?.setOnClickListener { animateView() }
+        view.findViewById<View>(R.id.backgroundImage)?.setOnClickListener { animateView() }
 
     }
 

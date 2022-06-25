@@ -15,7 +15,6 @@ import com.ruddell.resume.R
 import com.ruddell.resume.database.repositories.ContentRepository
 import com.ruddell.resume.extensions.constraintSet
 import com.ruddell.resume.models.WorkExperience
-import kotlinx.android.synthetic.main.card_work_item.view.*
 
 class WorkItemAdapter(
     val context: Context, lifecycleOwner: LifecycleOwner

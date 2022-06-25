@@ -9,7 +9,6 @@ import android.view.ViewGroup
 
 import com.ruddell.resume.R
 import com.ruddell.resume.extensions.getCenter
-import kotlinx.android.synthetic.main.fragment_top_level_content.*
 
 class TopLevelContentFragment : Fragment() {
 
@@ -17,6 +16,11 @@ class TopLevelContentFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val workButton = view.findViewById<View>(R.id.workButton)
+        val educationButton = view.findViewById<View>(R.id.educationButton)
+        val skillsButton = view.findViewById<View>(R.id.skillsButton)
+        val aboutButton = view.findViewById<View>(R.id.aboutButton)
 
         workButton?.setOnClickListener { showDetails(Details.WORK_EXPERIENCE, workButton) }
         educationButton?.setOnClickListener { showDetails(Details.EDUCATION, educationButton) }

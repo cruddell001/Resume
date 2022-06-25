@@ -2,6 +2,7 @@ package com.ruddell.resume.ui
 
 import android.os.Bundle
 import android.os.Handler
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.ruddell.resume.R
 import com.ruddell.resume.datasource.ApiImporter
@@ -11,7 +12,6 @@ import com.ruddell.resume.extensions.circleReveal
 import com.ruddell.resume.extensions.toColor
 import com.ruddell.resume.models.Position
 import com.ruddell.resume.ui.details.DetailsFragment
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        detailsBackground?.setOnClickListener { hideDetails() }
+        findViewById<View>(R.id.detailsBackground)?.setOnClickListener { hideDetails() }
 
         launch {
             withContext(Dispatchers.IO) { LocalImporter.import(this@MainActivity, R.raw.initialcontent) }
@@ -44,8 +44,8 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
     fun showDetails(details: Details, centerPosition: Position) {
         currentDetailPosition = centerPosition
         currentDetailShown = details
-        detailsBackground?.setBackgroundColor(details.backgroundColor)
-        detailsBackground?.circleReveal(centerPosition)
+        findViewById<View>(R.id.detailsBackground)?.setBackgroundColor(details.backgroundColor)
+        findViewById<View>(R.id.detailsBackground)?.circleReveal(centerPosition)
 
         Handler().postDelayed({
             supportFragmentManager?.apply {
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
         }
 
         detailsFragment = null
-        detailsBackground?.circleHide(currentDetailPosition)
+        findViewById<View>(R.id.detailsBackground)?.circleHide(currentDetailPosition)
     }
 }
 

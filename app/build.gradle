@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlin-android-extensions'
 
 ext {
     versions = [
@@ -34,6 +33,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    buildFeatures {
+        // Enables Jetpack Compose for this module
+        compose true
+    }
+
+    // Set both the Java and Kotlin compilers to target Java 8.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.1.1'
+    }
 }
 
 dependencies {
@@ -51,11 +67,11 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
 
     // arch room
-    implementation 'androidx.room:room-runtime:2.0.0'
-    kapt 'androidx.room:room-compiler:2.0.0'
-    testImplementation 'androidx.room:room-testing:2.0.0'
+    implementation 'androidx.room:room-runtime:2.4.2'
+    kapt 'androidx.room:room-compiler:2.4.2'
+    testImplementation 'androidx.room:room-testing:2.4.2'
     // use kapt for Kotlin
-    testImplementation 'androidx.arch.core:core-testing:2.0.0'
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
     // arch coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutine"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutine"
@@ -64,4 +80,20 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.5.0"
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
 
+    // compose
+    def compose_version = '1.1.1'
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.compose.material:material:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0'
+    implementation 'androidx.activity:activity-compose:1.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
+    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    implementation "androidx.navigation:navigation-compose:2.4.0-rc01"
+    implementation "com.google.accompanist:accompanist-insets:0.20.3"
+    implementation "androidx.compose.material:material-icons-extended:$compose_version"
+    implementation "androidx.compose.runtime:runtime-livedata:$compose_version"
+    implementation "androidx.compose.foundation:foundation:$compose_version"
+    implementation "androidx.compose.foundation:foundation-layout:$compose_version"
 }
