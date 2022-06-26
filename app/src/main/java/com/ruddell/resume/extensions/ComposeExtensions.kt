@@ -1,31 +1,16 @@
 package com.ruddell.resume.extensions
 
-import androidx.compose.material.Card
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import com.ruddell.resume.R
-import com.ruddell.resume.models.ApiModel
-import com.ruddell.resume.models.WorkExperience
 import com.ruddell.resume.ui.Details
 
 // colors
 val cardBackgroundColor: Color @Composable get() = colorResource(id = R.color.cardBackground)
 val titleColor: Color @Composable get() = colorResource(id = R.color.titleColor)
-
-@Composable
-fun ApiModel.DetailItemViewCollapsed() {
-    Card() {
-        when (this) {
-            is WorkExperience -> {
-
-            }
-        }
-    }
-
-}
 
 @Composable
 fun Details.backgroundColor() = colorResource(when (this) {

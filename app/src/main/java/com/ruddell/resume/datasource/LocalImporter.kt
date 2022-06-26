@@ -8,9 +8,9 @@ import com.ruddell.resume.extensions.fromJson
 import com.ruddell.resume.models.Resume
 
 object LocalImporter {
-    const val TAG = "LocalImporter"
+    private const val TAG = "LocalImporter"
 
-    //loads data from the local json file so we have initial content when the app launches - later we'll see if there's more up to date data on the server
+    // loads data from the local json file so we have initial content when the app launches - later we'll see if there's more up to date data on the server
     @WorkerThread
     fun import(context: Context, resourceId:Int) {
         Log.d(TAG, "import()")

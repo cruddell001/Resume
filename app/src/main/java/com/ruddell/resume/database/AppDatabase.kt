@@ -11,7 +11,7 @@ import com.ruddell.resume.models.Skills
 import com.ruddell.resume.models.WorkExperience
 
 @Database(
-    entities = arrayOf(WorkExperience::class, Education::class, Skills::class),
+    entities = [WorkExperience::class, Education::class, Skills::class],
     version = AppDatabase.DB_VERSION
 )
 @TypeConverters(JsonConverter::class)
@@ -31,13 +31,12 @@ abstract class AppDatabase : RoomDatabase() {
             return INSTANCE!!
         }
 
-        internal fun create(context: Context, memoryOnly: Boolean): AppDatabase {
-            val b: RoomDatabase.Builder<AppDatabase>
+        private fun create(context: Context, memoryOnly: Boolean): AppDatabase {
 
-            if (memoryOnly)
-                b = Room.inMemoryDatabaseBuilder(context.applicationContext, AppDatabase::class.java)
+            val b: Builder<AppDatabase> = if (memoryOnly)
+                Room.inMemoryDatabaseBuilder(context.applicationContext, AppDatabase::class.java)
             else
-                b = Room.databaseBuilder(context.applicationContext, AppDatabase::class.java, DB_NAME)
+                Room.databaseBuilder(context.applicationContext, AppDatabase::class.java, DB_NAME)
 
             return b.build()
         }

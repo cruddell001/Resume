@@ -8,8 +8,3 @@ import androidx.compose.ui.Modifier
 fun RowScope.RowSpacer() {
     Spacer(Modifier.fillMaxWidth().weight(1f))
 }
-
-@Composable
-fun ColumnScope.ColumnSpacer() {
-    Spacer(Modifier.fillMaxHeight().weight(1f))
-}

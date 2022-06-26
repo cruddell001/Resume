@@ -1,11 +1,9 @@
 package com.ruddell.resume.ui.navigation
 
-import android.os.Bundle
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.core.os.bundleOf
 import androidx.navigation.*
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable

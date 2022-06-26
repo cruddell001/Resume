@@ -1,15 +1,12 @@
 package com.ruddell.resume.ui
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Box
 import androidx.compose.ui.viewinterop.AndroidView
-import androidx.core.view.updateLayoutParams
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.ruddell.resume.R
@@ -19,7 +16,6 @@ import com.ruddell.resume.extensions.circleHide
 import com.ruddell.resume.extensions.circleReveal
 import com.ruddell.resume.extensions.toColor
 import com.ruddell.resume.models.Position
-import com.ruddell.resume.ui.details.DetailsFragment
 import com.ruddell.resume.ui.navigation.AppNavHost
 import com.ruddell.resume.ui.navigation.Destination
 import com.ruddell.resume.ui.navigation.navigate
@@ -28,11 +24,10 @@ import kotlin.coroutines.CoroutineContext
 
 class MainActivity : AppCompatActivity(), CoroutineScope {
     override val coroutineContext: CoroutineContext get() = Dispatchers.Main
-    var currentDetailShown:Details? = null
-    var currentDetailPosition:Position = Position(0,0)
-    var detailsFragment:DetailsFragment? = null
-    var controller: NavHostController? = null
-    var detailsBackground: View? = null
+    private var currentDetailShown:Details? = null
+    private var currentDetailPosition:Position = Position(0,0)
+    private var controller: NavHostController? = null
+    private var detailsBackground: View? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,18 +48,13 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
                             ViewGroup.LayoutParams.MATCH_PARENT,
                             ViewGroup.LayoutParams.MATCH_PARENT
                         )
-                    }.also {
-                        detailsBackground = it
+                    }.also { view ->
+                        detailsBackground = view
                     }
                 })
             }
 
         }
-    }
-
-    override fun onBackPressed() {
-        if (detailsFragment!=null) hideDetails()
-        else super.onBackPressed()
     }
 
     fun showDetails(details: Details, centerPosition: Position) {

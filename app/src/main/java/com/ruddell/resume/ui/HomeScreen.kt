@@ -1,7 +1,6 @@
 package com.ruddell.resume.ui
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.core.keyframes
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.Image
@@ -11,10 +10,8 @@ import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -43,8 +40,6 @@ import com.ruddell.resume.extensions.title
 import com.ruddell.resume.models.Position
 import com.ruddell.resume.ui.shared.RowSpacer
 import com.ruddell.resume.ui.shared.TitleView
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 @Composable
 fun HomeView(showContent: Boolean, onClick: () -> Unit) {

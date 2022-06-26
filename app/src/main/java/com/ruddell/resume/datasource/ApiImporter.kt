@@ -19,10 +19,10 @@ import kotlin.coroutines.CoroutineContext
 
 
 object ApiImporter : CoroutineScope {
-    const val TAG = "ApiImporter"
+    private const val TAG = "ApiImporter"
     override val coroutineContext: CoroutineContext get() = Dispatchers.IO
 
-    val client = HttpClient(CIO) {
+    private val client = HttpClient(CIO) {
         install(ContentNegotiation) {
             json(Json {
                 prettyPrint = true
