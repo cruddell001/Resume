@@ -1,11 +1,13 @@
 package com.ruddell.resume.ui
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.keyframes
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -17,9 +19,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInRoot
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -33,26 +40,21 @@ import com.ruddell.resume.R
 import com.ruddell.resume.extensions.backgroundColor
 import com.ruddell.resume.extensions.iconImage
 import com.ruddell.resume.extensions.title
+import com.ruddell.resume.models.Position
 import com.ruddell.resume.ui.shared.RowSpacer
 import com.ruddell.resume.ui.shared.TitleView
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 @Composable
-fun HomeView() {
-    val showContent = remember { mutableStateOf(false) }
-    LaunchedEffect(key1 = Unit) {
-        launch {
-            delay(3000L)
-            showContent.value = true
-        }
-    }
+fun HomeView(showContent: Boolean, onClick: () -> Unit) {
+    val activity = LocalContext.current as? MainActivity
     Box(contentAlignment = Alignment.BottomStart) {
         Image(
             painter = painterResource(id = R.drawable.profile),
             contentDescription = stringResource(id = R.string.my_name),
             modifier = Modifier.fillMaxSize().clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {
-                showContent.value = !showContent.value
+                onClick()
             },
             contentScale = ContentScale.FillHeight
         )
@@ -77,20 +79,20 @@ fun HomeView() {
             )
         }
         AnimatedVisibility(
-            visible = showContent.value,
+            visible = showContent,
             enter = slideInVertically(initialOffsetY = { it / 2 }),
             exit = slideOutVertically(targetOffsetY = { it / 2 })
         ) {
-            TopLevelContentView {
-                // TODO: go to detail screen
-                showContent.value = false
+            TopLevelContentView { detail, offset ->
+                activity?.showDetails(detail, Position(offset.x.toInt(), offset.y.toInt()))
             }
         }
+
     }
 }
 
 @Composable
-private fun TopLevelContentView(onClick: (Details) -> Unit) {
+private fun TopLevelContentView(onClick: (Details, Offset) -> Unit) {
     Box {
         Column(Modifier.padding(top = 20.dp).background(colorResource(id = R.color.cardBackground))) {
             TitleView(
@@ -104,18 +106,18 @@ private fun TopLevelContentView(onClick: (Details) -> Unit) {
             )
             Row(Modifier.padding(start = 8.dp, end = 8.dp, top = 8.dp)) {
                 ItemButton(detail = Details.WORK_EXPERIENCE) {
-                    onClick(Details.WORK_EXPERIENCE)
+                    onClick(Details.WORK_EXPERIENCE, it)
                 }
                 ItemButton(detail = Details.EDUCATION) {
-                    onClick(Details.EDUCATION)
+                    onClick(Details.EDUCATION, it)
                 }
             }
             Row(Modifier.padding(start = 8.dp, end = 8.dp, bottom = 8.dp)) {
                 ItemButton(detail = Details.SKILLS) {
-                    onClick(Details.SKILLS)
+                    onClick(Details.SKILLS, it)
                 }
                 ItemButton(detail = Details.ABOUT) {
-                    onClick(Details.ABOUT)
+                    onClick(Details.ABOUT, it)
                 }
             }
         }
@@ -132,14 +134,22 @@ private fun TopLevelContentView(onClick: (Details) -> Unit) {
 }
 
 @Composable
-private fun RowScope.ItemButton(detail: Details, onClick: () -> Unit) {
+private fun RowScope.ItemButton(detail: Details, onClick: (Offset) -> Unit) {
+    val buttonOffset = remember { mutableStateOf(Offset(0f, 0f)) }
     Column(
         Modifier
             .fillMaxWidth()
             .weight(1f)
             .padding(8.dp)
             .background(color = detail.backgroundColor())
-            .clickable { onClick() }
+            .onGloballyPositioned { coordinates ->
+                buttonOffset.value = coordinates.positionInRoot()
+            }
+            .pointerInput(Unit) {
+                detectTapGestures {
+                    onClick(Offset(buttonOffset.value.x + it.x, buttonOffset.value.y + it.y))
+                }
+            }
     ) {
         Image(painter = detail.iconImage(), contentDescription = detail.name, modifier = Modifier.padding(24.dp))
         TitleView(text = detail.title(), modifier=  Modifier.fillMaxWidth().padding(bottom = 16.dp), style = TextStyle(textAlign = TextAlign.Center))
@@ -149,5 +159,5 @@ private fun RowScope.ItemButton(detail: Details, onClick: () -> Unit) {
 @Preview
 @Composable
 private fun HomePreview() {
-    HomeView()
+    HomeView(true) {}
 }
