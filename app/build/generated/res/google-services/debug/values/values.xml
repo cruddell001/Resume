@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">994547387143-oljvq1p8vkrj1r7nqoenrasoofken175.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">994547387143</string>
+    <string name="google_api_key" translatable="false">AIzaSyCQO3nAymzvWrmANU4_cEjubGNtNy4QWfc</string>
+    <string name="google_app_id" translatable="false">1:994547387143:android:07e831e2c8d6f3ed7a53a2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCQO3nAymzvWrmANU4_cEjubGNtNy4QWfc</string>
+    <string name="google_storage_bucket" translatable="false">my-resume-38989.appspot.com</string>
+    <string name="project_id" translatable="false">my-resume-38989</string>
+</resources>
