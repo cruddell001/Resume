@@ -21,9 +21,17 @@ ext {
 }
 
 android {
+    signingConfigs {
+        release {
+            storeFile file("$keystore_path")
+            storePassword "$keystore_pass"
+            keyAlias "$alias_name"
+            keyPassword "$alias_pass"
+        }
+    }
     compileSdkVersion 31
     defaultConfig {
-        applicationId "com.ruddell.resume"
+        applicationId "app.my_resume.android"
         minSdkVersion 26
         targetSdkVersion 31
         versionCode 1
@@ -35,6 +43,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     buildFeatures {
