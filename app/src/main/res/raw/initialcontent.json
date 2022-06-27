@@ -1,9 +1,21 @@
 {
   "workExperience": [
     {
+      "position":"Lead Mobile Software Engineer",
+      "companyName":"BigCommerce",
+      "dates":"Sept 2020\n-\nPresent",
+      "description":"• Responsible for the architecture decisions of the app as well as much of the implementation.\n• Provide mentoring and engineering guidance for other members of the team, which consists of 5 other engineers.\n• Communicate with other teams across the organization to improve and expand upon the public and internal api's. Implement new api's as needed, both public and internal.\n• Create and monitor performance and observability dashboards for the mobile apps and push notification server.\n• Responsible for maintaining and implementing features for the Scala service that governs push notifications and app logins.\n• Monitor user feedback across channels and contribute to product/design decisions for the mobile app.\n• Oversee the publishing process for app releases, including implementing changes in team process to allow for regular, bi-weekly updates to the Play Store."
+    },
+    {
+      "position":"Senior Mobile Engineer",
+      "companyName":"BigCommerce",
+      "dates":"April 2019\n-\nSept 2020",
+      "description":"• Planned, developed and tested the Android app for managing storefronts\n• Deployed beta version of app and oversaw its release on Google Play within first 3 months of employment, and published release version 3 months later. Continued to develop and maintain app through company’s IPO process.\n• Implemented app entirely using Kotlin, making use of libraries such as Coroutines, Retrofit, Firebase, charting, etc\n• Monitored user feedback across channels and contribute to product/design decisions for the mobile app.\n• Implemented new api endpoints on backend servers for mobile app to communicate with.\n• Developed MacOS app (Swift) for internal testing used to facilitate creating trial stores and seeding them with dummy data\n• Participated in code reviews for iOS development and Scala backend development"
+    },
+    {
       "position":"Mobile Software Developer",
       "companyName":"Museum of the Bible",
-      "dates":"May 201\n-\nPresent",
+      "dates":"May 2015\n-\nApril 2019",
       "description":"• Serve as lead developer on agile software team of 4 engineers\n• Design primary architecture for app\n• Implement SQLite databases using Room and Provider\n• Develop custom libraries to be used in app\n• Develop/maintain private Maven repository server\n• Coordinate with partners to develop and integrate custom libraries\n• Develop custom ROM for use with Android app\n• Implement XMPP in both app and server\n• Develop custom in-house analytics solution\n• Develop accessibility features\n• Develop desktop applications to serve as internal tools\n• Develop Spring Boot api service for remote device management functionality"
     },
     {

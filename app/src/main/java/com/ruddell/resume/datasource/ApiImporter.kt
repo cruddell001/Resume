@@ -33,7 +33,7 @@ object ApiImporter : CoroutineScope {
         install(Logging)
     }
 
-    private suspend fun downloadContent(): Resume? = client.get("https://my-resume.app/").body()
+    private suspend fun downloadContent(): Resume? = client.get("https://my-resume.app/data").body()
 
     fun import(context:Context) {
         launch {
