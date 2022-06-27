@@ -1,5 +1,6 @@
 package com.ruddell.resume.ui
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
@@ -154,5 +155,17 @@ private fun RowScope.ItemButton(detail: Details, onClick: (Offset) -> Unit) {
 @Preview
 @Composable
 private fun HomePreview() {
+    HomeView(false) {}
+}
+
+@Preview
+@Composable
+fun TopContentPreview() {
+    TopLevelContentView { a, b -> }
+}
+
+@Preview(uiMode = UI_MODE_NIGHT_YES)
+@Composable
+private fun HomePreviewRaised() {
     HomeView(true) {}
 }

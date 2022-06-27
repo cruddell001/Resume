@@ -2,6 +2,7 @@ package com.ruddell.resume.datasource
 
 import android.content.Context
 import android.util.Log
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.ruddell.resume.database.repositories.ContentRepository
 import com.ruddell.resume.models.Resume
 import io.ktor.client.*
@@ -33,7 +34,13 @@ object ApiImporter : CoroutineScope {
         install(Logging)
     }
 
-    private suspend fun downloadContent(): Resume? = client.get("https://my-resume.app/data").body()
+    private suspend fun downloadContent(): Resume? =
+        try { client.get("https://my-resume.app/data").body() }
+        catch (e: Exception) {
+            e.printStackTrace()
+            FirebaseCrashlytics.getInstance().recordException(e)
+            null
+        }
 
     fun import(context:Context) {
         launch {
