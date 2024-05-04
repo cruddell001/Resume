@@ -5,9 +5,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bb27b148bca3aff83d12acbb98bdd9bb/transformed/jetified-accompanist-insets-0.20.3/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0bc30ccae5a137d475e27d6820b89fcf/transformed/jetified-accompanist-insets-0.20.3/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f196e0c2be376bca6f77391dc420c24c/transformed/jetified-accompanist-insets-0.20.3/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ed0fdb762055afbec25325193c74fb3e/transformed/jetified-accompanist-insets-0.20.3/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ed0fdb762055afbec25325193c74fb3e/transformed/jetified-accompanist-insets-0.20.3/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ed0fdb762055afbec25325193c74fb3e/transformed/jetified-accompanist-insets-0.20.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/7470abd5a0468fd2b663cdf7bc49507d/transformed/jetified-accompanist-insets-0.20.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7470abd5a0468fd2b663cdf7bc49507d/transformed/jetified-accompanist-insets-0.20.3/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.accompanist/accompanist-insets/0.20.3/5ba020cc43cdf24a63c5a65217d72b9db5dbe7b4/accompanist-insets-0.20.3-javadoc.jar!/" />

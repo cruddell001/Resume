@@ -1,104 +1,145 @@
 {
   "workExperience": [
     {
-      "position":"Lead Mobile Software Engineer",
-      "companyName":"BigCommerce",
-      "dates":"Sept 2020\n-\nPresent",
-      "description":"• Responsible for the architecture decisions of the app as well as much of the implementation.\n• Provide mentoring and engineering guidance for other members of the team, which consists of 5 other engineers.\n• Communicate with other teams across the organization to improve and expand upon the public and internal api's. Implement new api's as needed, both public and internal.\n• Create and monitor performance and observability dashboards for the mobile apps and push notification server.\n• Responsible for maintaining and implementing features for the Scala service that governs push notifications and app logins.\n• Monitor user feedback across channels and contribute to product/design decisions for the mobile app.\n• Oversee the publishing process for app releases, including implementing changes in team process to allow for regular, bi-weekly updates to the Play Store."
+      "id": 1,
+      "position": "Lead Mobile Software Engineer",
+      "companyName": "BigCommerce",
+      "dates": "Sept 2020\n-\nPresent",
+      "description": "• Drive architectural decisions and implementation strategies for BigCommerce's mobile application,ensuring scalability, performance, and user engagement.\n• Lead a team of 4 engineers in building and enhancing the mobile app, fostering collaboration and innovation to deliver impactful features and improvements.\n• Develop and optimize analytic queries and dashboards to gain insights into user behavior and preferences, guiding product strategy and decision-making.\n• Collaborate closely with cross-functional teams to align technical initiatives with business objectives and market opportunities, contributing to the success of the mobile app.\n• Successfully navigated the team through a challenging period of layoffs, providing leadership and support during the transition to a new engineering manager.\n• Implement process improvements to streamline the app release process, enabling regular updates to the Google Play Store and App Store, ensuring a consistent bi-weekly release schedule.\n• Actively contribute to roadmap planning and discussions, leveraging technical expertise and market insights to drive innovation and growth opportunities.\n• Monitor and optimize performance and observability dashboards for mobile apps and push notification servers, ensuring reliability and proactive issue resolution.\n• Play a key role in designing and implementing features for the Scala service governing push notifications and app logins, enhancing functionality and user experience."
     },
     {
-      "position":"Senior Mobile Engineer",
-      "companyName":"BigCommerce",
-      "dates":"April 2019\n-\nSept 2020",
-      "description":"• Planned, developed and tested the Android app for managing storefronts\n• Deployed beta version of app and oversaw its release on Google Play within first 3 months of employment, and published release version 3 months later. Continued to develop and maintain app through company’s IPO process.\n• Implemented app entirely using Kotlin, making use of libraries such as Coroutines, Retrofit, Firebase, charting, etc\n• Monitored user feedback across channels and contribute to product/design decisions for the mobile app.\n• Implemented new api endpoints on backend servers for mobile app to communicate with.\n• Developed MacOS app (Swift) for internal testing used to facilitate creating trial stores and seeding them with dummy data\n• Participated in code reviews for iOS development and Scala backend development"
+      "id": 2,
+      "position": "Senior Mobile Engineer",
+      "companyName": "BigCommerce",
+      "dates": "April 2019\n-\nSept 2020",
+      "description": "• Planned, developed and tested the Android app for managing storefronts\n• Deployed beta version of app and oversaw its release on Google Play within first 3 months of employment, and published release version 3 months later. Continued to develop and maintain app through company’s IPO process.\n• Monitored user feedback across channels and contribute to product/design decisions for the mobile app.\n• Implemented new api endpoints on backend servers for mobile app to communicate with.\n• Participated in code reviews for iOS development and Scala backend development"
     },
     {
-      "position":"Mobile Software Developer",
-      "companyName":"Museum of the Bible",
-      "dates":"May 2015\n-\nApril 2019",
-      "description":"• Serve as lead developer on agile software team of 4 engineers\n• Design primary architecture for app\n• Implement SQLite databases using Room and Provider\n• Develop custom libraries to be used in app\n• Develop/maintain private Maven repository server\n• Coordinate with partners to develop and integrate custom libraries\n• Develop custom ROM for use with Android app\n• Implement XMPP in both app and server\n• Develop custom in-house analytics solution\n• Develop accessibility features\n• Develop desktop applications to serve as internal tools\n• Develop Spring Boot api service for remote device management functionality"
+      "id": 3,
+      "position": "Mobile Software Developer",
+      "companyName": "Museum of the Bible",
+      "dates": "May 2015\n-\nApril 2019",
+      "description": "• Serve as lead developer on agile software team of 4 engineers\n• Designed primary architecture for the mobile app, installed on on-premise devices handed to museumgoers during their visit\n• Worked with outside partners to develop and integrate custom libraries into app related to mapping, camera technologies, location technologies, and over-the-air updates using multicast\n• Developed custom ROM for use with Android app\n• Integrated XMPP technology into app to create bidirectional and peer-to-peer communications, including development of a backend service to manage messages\n• Developed custom in-house analytics solution for app and interactive touch tables that did not rely on outside servers\n• Developed Spring Boot api service for remote device management functionality\n• Migrated code from Java to Kotlin for approximately 90% of app."
     },
     {
-      "position":"Freelance Developer",
-      "companyName":"Self-employed",
-      "dates":"October 2017\n-\nPresent",
-      "description":"• Developed a website for surrogate mothers using Java Spring Boot/Thymeleaf, backed by a JDBC database implementation and the Kotlin language\n\n• Provided development and support for a website and native mobile app (iOS and Android) to facilitate notifiying school officials (staff, admins, first responders) in the event of emergencies\n\n• Developed a custom Wordpress plugin to schedule social media posts in the future to Facebook, Twitter and LinkedIn (similar to Hootsuite, but for a custom Wordpress website)\n\n• Developed a custom Wordpress plugin to control a IP-based webcam on a motorized track via a website interface."
+      "id": 4,
+      "position": "Freelance Developer",
+      "companyName": "Self-employed",
+      "dates": "October 2017\n-\nPresent",
+      "description": "• Developed a website for surrogate mothers using Java Spring Boot/Thymeleaf, backed by a JDBC database implementation and the Kotlin language\n\n• Provided development and support for a website and native mobile app (iOS and Android) to facilitate notifiying school officials (staff, admins, first responders) in the event of emergencies\n\n• Developed a custom Wordpress plugin to schedule social media posts in the future to Facebook, Twitter and LinkedIn (similar to Hootsuite, but for a custom Wordpress website)\n\n• Developed a custom Wordpress plugin to control a IP-based webcam on a motorized track via a website interface."
     },
     {
-      "position":"Founder and Developer",
-      "companyName":"Church Phone Apps",
-      "dates":"August 2012\n-\nMay 2015",
-      "description":"• Created dynamic website with custom-developed Wordpress plugins and theming at www.churchphoneapps.com\n\n• Created dynamic api allowing apps to communicate with server\n\n• Developed approximately 18 iOS and Android apps for churches and non-profit organizations\n\n• Developed the Custom.Church app for iOS and Android, allowing churches to instantly preview what their app\nwill look like and to manage all content from within the Custom.Church app interface.\n\n• Created Restore Hope app – an Android app created for the Restore Hope organization whereby the organization’s volunteers can take food orders for clients and send the results to a printer. A custom webpage was built for the organization using HTML and PHP to allow food menu items to be created dynamically. This app was featured in the Tulsa World on April 6, 2015"
+      "id": 5,
+      "position": "Founder and Developer",
+      "companyName": "Church Phone Apps",
+      "dates": "August 2012\n-\nMay 2015",
+      "description": "• Created dynamic website with custom-developed Wordpress plugins and theming at www.churchphoneapps.com\n\n• Created dynamic api allowing apps to communicate with server\n\n• Developed approximately 18 iOS and Android apps for churches and non-profit organizations\n\n• Developed the Custom.Church app for iOS and Android, allowing churches to instantly preview what their app\nwill look like and to manage all content from within the Custom.Church app interface.\n\n• Created Restore Hope app – an Android app created for the Restore Hope organization whereby the organization’s volunteers can take food orders for clients and send the results to a printer. A custom webpage was built for the organization using HTML and PHP to allow food menu items to be created dynamically. This app was featured in the Tulsa World on April 6, 2015"
     },
     {
-      "position":"Developer",
-      "companyName":"Simply Apps",
-      "dates":"August 2012\n-\nMay 2015",
-      "description":"• Developed approximately 13 apps for clients in Perth, Australia.\n\n• Developed a sales lead tracking portal for administrative use at www.simplyapps.com.au\n\n• Created multiple apis allowing apps to communicate with server"
+      "id": 6,
+      "position": "Developer",
+      "companyName": "Simply Apps",
+      "dates": "August 2012\n-\nMay 2015",
+      "description": "• Developed approximately 13 apps for clients in Perth, Australia.\n\n• Developed a sales lead tracking portal for administrative use at www.simplyapps.com.au\n\n• Created multiple apis allowing apps to communicate with server"
     },
     {
-      "position":"Associate Pastor",
-      "companyName":"United Methodist Church",
-      "dates":"June 2008\n-\nMay 2015",
-      "description":"• Responsible for technology ministries, including social media strategy, website ministries, mobile ministries, etc.\n\n• Performed public speaking through preaching opportunities from audiences ranging in size up to 450.\n\n• Other duties as assigned."
+      "id": 7,
+      "position": "Associate Pastor",
+      "companyName": "United Methodist Church",
+      "dates": "June 2008\n-\nMay 2015",
+      "description": "• Responsible for technology ministries, including social media strategy, website ministries, mobile ministries, etc.\n\n• Performed public speaking through preaching opportunities from audiences ranging in size up to 450.\n\n• Other duties as assigned."
     },
     {
-      "position":"Senior Auditor",
-      "companyName":"PricewaterhouseCoopers",
-      "dates":"January 2003\n-\nAugust 2007",
-      "description":"• Audited or supervised auditing of all areas of financial statements, spending primary\nemphasis on audit of revenue recognition, audit of footnotes to financial statements,\nand review and supervision of associate auditors.\n\n• Supervised, coached and assisted 4-6 associate auditors at a time\n\n• Communicated recommendations to clients for improvement to accounting practices\nand business processes."
+      "id": 8,
+      "position": "Senior Auditor",
+      "companyName": "PricewaterhouseCoopers",
+      "dates": "January 2003\n-\nAugust 2007",
+      "description": "• Audited or supervised auditing of all areas of financial statements, spending primary\nemphasis on audit of revenue recognition, audit of footnotes to financial statements,\nand review and supervision of associate auditors.\n\n• Supervised, coached and assisted 4-6 associate auditors at a time\n\n• Communicated recommendations to clients for improvement to accounting practices\nand business processes."
     }
   ],
-  "skills":[
+  "education": [
     {
-      "categoryName":"Languages & Frameworks",
-      "itemNames":["Kotlin", "Java", "Objective-C", "Swift", "Spring Boot", "SQLite", "PHP", "MySQL", "XML", "JSON"]
+      "id": 1,
+      "schoolName": "Udacity",
+      "degreeName": "Android Developer Nanodegree",
+      "graduationDate": "March 2016",
+      "gpa": null,
+      "website": "https://goo.gl/kpaaAw"
     },
     {
-      "categoryName":"Software & Libraries",
-      "itemNames":["Android Studio/Intellij", "XCode/AppCode", "Retrofit", "Android Architecture Components",
-        "Crashlytics", "Git", "Maven", "LAMP"]
+      "id": 2,
+      "schoolName": "Saint Paul School of Theology",
+      "degreeName": "Master of Divinity",
+      "graduationDate": "May 2011",
+      "gpa": 3.81,
+      "website": "https://www.spst.edu"
     },
     {
-      "categoryName":"Hardware & Devices",
-      "itemNames":["Android", "iPhone", "iPad", "AWS EC2", "AWS S3"]
+      "id": 3,
+      "schoolName": "The Ohio State University",
+      "degreeName": "Master of Accounting",
+      "graduationDate": "December 2002",
+      "gpa": 3.48,
+      "website": "https://www.osu.edu"
+    },
+    {
+      "id": 4,
+      "schoolName": "Saint Paul School of Theology",
+      "degreeName": "Board of Trustees",
+      "graduationDate": "2011-2018",
+      "gpa": null,
+      "website": null
+    },
+    {
+      "id": 5,
+      "schoolName": "Ohio Board of Accountancy",
+      "degreeName": "Certified Public Accountant",
+      "graduationDate": "Inactive",
+      "gpa": null,
+      "website": null
     }
   ],
-  "education":[
+  "skills": [
     {
-      "schoolName":"Udacity",
-      "degreeName":"Android Developer Nanodegree",
-      "graduationDate":"March 2016",
-      "gpa":null,
-      "website":"https://goo.gl/kpaaAw"
+      "id": 1,
+      "categoryName": "Languages & Frameworks",
+      "itemNames": [
+        "Kotlin",
+        "Java",
+        "Objective-C",
+        "Swift",
+        "Spring Boot",
+        "SQLite",
+        "PHP",
+        "MySQL",
+        "XML",
+        "JSON"
+      ]
     },
     {
-      "schoolName":"Saint Paul School of Theology",
-      "degreeName":"Master of Divinity",
-      "graduationDate":"May 2011",
-      "gpa":3.81,
-      "website":"https://www.spst.edu"
+      "id": 2,
+      "categoryName": "Software & Libraries",
+      "itemNames": [
+        "Android Studio/Intellij",
+        "XCode/AppCode",
+        "Retrofit",
+        "Android Architecture Components",
+        "Crashlytics",
+        "Git",
+        "Maven",
+        "LAMP"
+      ]
     },
     {
-      "schoolName":"The Ohio State University",
-      "degreeName":"Master of Accounting",
-      "graduationDate":"December 2002",
-      "gpa":3.48,
-      "website":"https://www.osu.edu"
-    },
-    {
-      "schoolName":"Saint Paul School of Theology",
-      "degreeName":"Board of Trustees",
-      "graduationDate":"2011-2018",
-      "gpa":null,
-      "website":null
-    },
-    {
-      "schoolName":"Ohio Board of Accountancy",
-      "degreeName":"Certified Public Accountant",
-      "graduationDate":"Inactive",
-      "gpa":null,
-      "website":null
+      "id": 3,
+      "categoryName": "Hardware & Devices",
+      "itemNames": [
+        "Android",
+        "iPhone",
+        "iPad",
+        "AWS EC2",
+        "AWS S3"
+      ]
     }
   ]
 }

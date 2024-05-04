@@ -29,12 +29,12 @@ android {
             keyPassword "$alias_pass"
         }
     }
-    compileSdkVersion 31
+    compileSdkVersion 34
     defaultConfig {
         applicationId "app.my_resume.android"
         minSdkVersion 26
-        targetSdkVersion 31
-        versionCode 3
+        targetSdkVersion 34
+        versionCode 4
         versionName "1.2"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         buildConfigField("String", "CONTENT_SERVER_URL", "\"$servers.resume\"")
@@ -63,6 +63,7 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion '1.1.1'
     }
+    namespace 'com.ruddell.resume'
 }
 
 dependencies {
